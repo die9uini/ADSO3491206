@@ -9,8 +9,51 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100dvh;
+    nav.back{
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        a:link, a:visited{
+            background-color: #fff3;
+            border: 2px solid white;
+            border-radius: 50%;
+            height: 34px;
+            display: flex;
+            padding: 0.4rem;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            color: white;
+            transform: scale(0.8);
+            transition: all 0.4s ease-out;
+            &:hover{
+                transform: scale(1);
+            }
+        }
+    }
+    &.html{
+        background: linear-gradient(45deg, black, #e44d26);
+        main{
+            menu.mainmenu{
+                a:link, a:visited{
+                    span{
+                        background-color: #e44d26;
+                    }
+                }
+            }
+        }
+    }
     main {
         header.mainmenu {
+            &.internal{
+                h1{
+                    font-size: 2rem;
+                }
+                img{
+                    height: 120px;
+                    width: 120px;
+                }
+            }
             h1 {
                 font-size: 3.6rem;
                 border-bottom: 2px solid #0c3817;
@@ -61,7 +104,13 @@ body {
                 width: 320px;
                 display: flex;
                 align-items: center;
+                padding: 0.6rem;
                 text-decoration: none;
+                transition: all 0.4s ease-in;
+                &:hover{
+                    background-color: #53e09e;
+                    color: #000000;
+                }
                 span{
                     background-color: #53e09e;
                     border-radius: 50%;
@@ -88,6 +137,14 @@ body {
                     }
                 }
             }
+        }
+        section{
+            background-color: #0009;
+            border-radius: 0.4rem;
+            margin-top: 2rem;
+            padding: 0.8rem; 
+            min-height: 200px;
+            width: 380px
         }
     }
 }
