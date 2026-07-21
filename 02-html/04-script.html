@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>00-template</title>
+    <title>04-Script</title>
     <link rel="stylesheet" href="../src/css/styles.css">
 </head>
 <body class="html">
@@ -14,13 +14,23 @@
     </nav>
     <main>
         <header class="mainmenu internal">
-            <h1>00-template</h1>
+            <h1>04-Script</h1>
             <img src="../src/imgs/logo-html.png" alt="Profile">
-            <h3>Description</h3>
+            <h3>Inserta código en JavaScript.</h3>
         </header>
         <section>
-
+            <h2 class="subtitle">Bienvenido:</h2>
+            <h3 class="user"></h3>
         </section>
     </main>
+    <script>
+        const user = document.querySelector(".user");
+        const answer = prompt("Ingrese su nombre:");
+        if(answer){
+            user.textContent = "Hola, " + answer + "🗣️";
+        } else{
+            user.textContent = "Hola, invitado 🗣️";
+        }
+    </script>
 </body>
 </html>
